@@ -19,7 +19,26 @@
         "command": "aiven-vs-code-extension.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "aivenServices",
+          "name": "Aiven Service Explorer"
+        }
+      ]
+    },
+    "configuration" : {
+      "type" : "object",
+      "title": "Aiven",
+      "properties" : {
+        "aiven.accessToken": {
+          "type": "string",
+          "description": "Aiven access token",
+          "default": ""
+        }
+      } 
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
