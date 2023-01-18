@@ -36,6 +36,11 @@
           "type": "string",
           "description": "Aiven access token",
           "default": ""
+        },
+         "aiven.project": {
+          "type": "string",
+          "description": "Aiven project",
+          "default": ""
         }
       } 
     }

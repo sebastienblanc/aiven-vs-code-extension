@@ -65,10 +65,10 @@ export class AivenServiceTreeview implements vscode.TreeDataProvider<Service> {
   private getServices(): Thenable<Service[]> {
     const options = {
       hostname: 'api.aiven.io',
-      path: '/v1/project/dev-advocates/service',
+      path: `/v1/project/${vscode.workspace.getConfiguration().get('aiven.project')}/service`,
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `aivenv1 ${vscode.workspace.getConfiguration().get('aiven.accessToken')}`
+        'Authorization': `Bearer ${vscode.workspace.getConfiguration().get('aiven.accessToken')}`
       }
     };
 
